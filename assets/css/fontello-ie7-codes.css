@@ -1,0 +1,7 @@
+
+.icon-mail { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-link { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-chat { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf03d;&nbsp;'); }
+.icon-twitter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;&nbsp;'); }
+.icon-github { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf113;&nbsp;'); }
+.icon-steam-squared { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1b7;&nbsp;'); }

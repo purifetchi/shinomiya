@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>shinomiya - Your website title</title>
+		<link rel="stylesheet" href="assets/css/fontello.css">
+		<link rel="stylesheet" href="assets/css/shinomiya.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Your very own website utilizing the shinomiya template">
+    	<meta name="keywords" content="put,your,tags,here">
+    	<meta name="author" content="Your name">
+    	<meta name="twitter:card" content="summary">
+    	<meta name="twitter:creator" content="@yourtwittertag">
+    	<meta property="og:url" content="https://yourdomain.com/">
+    	<meta property="og:title" content="Your name">
+    	<meta property="og:description" content="Your very own website utilizing the shinomiya template">
+    	<meta property="og:image" content="https://yourdomain.com/assets/img/shinomiya.jpg" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="box box-avatar">
+				<img src="assets/img/shinomiya.jpg" class="avatar"><br>
+				<span class="heading">Your name</span>
+				<div class="bio">
+					<span class="lowercaps">STH</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in egestas sem. Donec porta mauris ultricies enim imperdiet, eget interdum odio aliquam. Cras euismod, nisl in tincidunt semper, nulla nisl iaculis libero, a consectetur metus elit eleifend quam. 
+				</div>
+			</div>
+
+			<div class="headerDivider"></div>
+
+			<div class="box">
+				<div class="heading">Heading 1</div>
+
+				<a class="link" href="https://example.com"><i class="icon-twitter"></i>link 1</a>
+				<a class="link" href="https://example.com"><i class="icon-steam-squared"></i>link 2</a>
+				<a class="link" href="https://example.com"><i class="icon-mail"></i>link 3</a>
+				<a class="link" href="https://example.com"><i class="icon-github"></i>link 4</a>
+				<a class="link" href="#" onclick="showPopup();"><i class="icon-chat"></i> popup-able link 5</a>
+					
+				<div class="heading">Heading 2</div>
+
+				<a class="link" href="https://example.com"><i class="icon-link"></i>link 1</a>
+				<a class="link" href="https://example.com"><i class="icon-link"></i>link 2</a>
+
+				<div class="heading">Heading 3</div>
+
+				<a class="link" href="https://example.com"><i class="icon-link"></i>link 1</a>
+				<a class="link" href="https://example.com"><i class="icon-link"></i>link 2</a>
+				<a class="link" href="https://example.com"><i class="icon-link"></i>link 3</a>
+				<a class="link" href="https://example.com"><i class="icon-link"></i>link 4</a>
+
+				<div class="quote">Mauris aliquet, sapien eget consectetur porta, tortor neque faucibus mauris, sed lobortis justo tortor sit amet libero. Integer viverra odio a faucibus lobortis. Phasellus magna tellus, pulvinar id ipsum quis, interdum tincidunt augue. Aenean blandit et tellus in eleifend. Mauris dui nibh, vehicula vitae felis sit amet, placerat dignissim ante</div>
+				<div class="quoteauthor">- The Lorem Ipsum Generator</div>
+			</div>
+		</div>
+
+		<div id="overlay" onclick="hidePopup();"></div>
+
+		<div id="popup">
+			<div class="popupheader">
+				<div class="popupheading">Your message</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" defer>
+			var overlay = document.getElementById("overlay");
+			var popup = document.getElementById("popup");
+
+			function showPopup() {
+				overlay.classList.add("dimpage");
+				setTimeout(function() {
+					popup.classList.add("showpopup");
+				}, 400);
+			}
+
+			// I'm very sorry.
+			function hidePopup() {
+				popup.classList.remove("showpopup");
+				popup.classList.add("hidepopup");
+				setTimeout(function() {
+					popup.classList.remove("hidepopup");
+					overlay.classList.remove("dimpage");
+					overlay.classList.add("undimpage");
+
+					setTimeout(function() {
+						overlay.classList.remove("undimpage");
+					}, 400);
+				}, 400);
+			}
+		</script>
+	</body>
+</html>
+
+
+
+
+
+	

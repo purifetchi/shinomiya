@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:800|Work+Sans:300&display=swap');
+
+html, body {
+	min-height: 100%;
+	background-color: black;
+
+	background-image: url("../img/bg2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar {
+	border-radius: 50%;
+
+	max-width: 150px;
+	max-height: 150px;
+
+	width: auto;
+	height: auto;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+
+	animation: zoomIn 0.4s ease-in-out;
+}
+
+.box {
+	width: 300px;
+	color: white;
+	margin-right: 50px;
+	height:auto;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.headerDivider {
+    border-right: 1px solid #808080; 
+    height: auto;
+    margin-right: 50px;
+}
+
+.link {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.2rem;
+
+	transform: scale(1);
+	transition: transform 0.1s linear;
+
+	text-decoration: none;
+
+	color: white;
+}
+
+.link:hover {
+	transform: scale(1.05);
+	transition: transform 0.1s linear;
+
+	text-shadow: 0px 0px 5px blue;
+}
+
+.bio {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1rem;
+	margin-bottom: 10px;
+}
+
+.heading {
+	font-family: 'Catamaran', sans-serif;
+	font-size: 3rem;
+	user-select: none;
+}
+
+.lowercaps {
+	font-family: 'Catamaran', sans-serif;
+	font-size: 0.7rem;
+}
+
+.quote {
+	font-family: 'Work Sans', sans-serif;
+	margin-top: 20px;
+	font-size: 0.6rem;
+	text-align: justify;
+}
+
+.quoteauthor {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 0.6rem;
+	text-align: right;
+}
+
+.box-avatar {
+	justify-content: center;
+	align-items: center;
+	text-align: justify;
+}
+
+#overlay {
+	position: fixed;
+	display: none;
+
+	left: 0;
+	top: 0;
+
+	background-color: black;
+
+	width: 100%;
+	height: 100%;
+
+	cursor: pointer;
+}
+
+.dimpage {
+	display: block !important;
+	animation: dimPage 0.4s ease-out;
+	animation-fill-mode: forwards;
+}
+
+.undimpage {
+	display: block !important;
+	animation: undimPage 0.4s ease-out;
+	animation-fill-mode: forwards;
+}
+
+#popup {
+	position: fixed;
+	display: none;
+	flex-direction: column;
+
+	left: 50%;
+	top: 50%;
+
+	transform: translate(-50%, -100%);
+
+	width: 400px;
+	height: 200px;
+
+	background-color: white;
+
+	border-radius: 10px;
+
+	box-shadow: 0px 0px 12px #7a7a7a;
+
+	animation: showPopup 0.6s ease-out;
+	animation-fill-mode: forwards;
+}
+
+.showpopup {
+	display: flex !important;
+}
+
+.hidepopup {
+	display: flex !important;
+
+	animation: hidePopup 0.6s ease-out !important;
+	animation-fill-mode: forwards  !important;
+}
+
+.popupheader {
+	display: flex;
+
+	background: linear-gradient(to right bottom, #ff0000, #0000ff);
+	background-size: 200% 200%;
+	flex-grow: 2;
+
+	border-radius: 10px;
+
+	animation: gradientScroll 10s ease infinite;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.popupheading {
+	font-family: 'Catamaran', sans-serif;
+	font-size: 2em;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		margin-right: 0px;
+		margin-bottom: auto;
+	}
+
+	.headerDivider {
+		border-bottom:1px solid #808080; 
+
+     	margin-right: 0px;
+	}
+
+	.box {
+		width: 300px;
+		color: white;
+
+		display: flex;
+		margin-right: 0px;
+	}
+
+	#popup {
+		width: 90%;
+	}
+
+	.popupheading {
+		font-size: 2em;
+	}
+}
+
+@keyframes zoomIn {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes dimPage {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.7;
+	}
+}
+
+@keyframes undimPage {
+	from {
+		opacity: 0.7;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes showPopup {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -100%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes hidePopup {
+	from {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+	to {
+		opacity: 0;
+		transform: translate(-50%, -100%);
+	}
+}
+
+@keyframes gradientScroll {
+    0% {
+    	background-position:0% 18%
+    }
+    50% {
+    	background-position:100% 83%
+    }
+    100% {
+    	background-position:0% 18%
+    }
+}
